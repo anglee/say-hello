@@ -1,5 +1,5 @@
 {
-  "name": "say-hello",
+  "name": "@anglee/say-hello",
   "version": "1.0.0",
   "description": "Just want to say hello!",
   "main": "lib/index.js",
