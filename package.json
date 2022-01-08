@@ -1,0 +1,42 @@
+{
+  "name": "say-hello",
+  "version": "1.0.0",
+  "description": "Just want to say hello!",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "jest --config jestconfig.json",
+    "prepublishOnly": "npm test && npm run lint",
+    "prepare": "npm run build",
+    "build": "tsc",
+    "prettier": "prettier --config .prettierrc --write \"src/**/*.ts\"",
+    "lint": "eslint src --ext .ts",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anglee/say-hello.git"
+  },
+  "keywords": [],
+  "author": "anglee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anglee/say-hello/issues"
+  },
+  "homepage": "https://github.com/anglee/say-hello#readme",
+  "devDependencies": {
+    "@types/jest": "^27.4.0",
+    "@typescript-eslint/eslint-plugin": "^5.9.0",
+    "@typescript-eslint/parser": "^5.9.0",
+    "eslint": "^8.6.0",
+    "jest": "^27.4.7",
+    "prettier": "^2.5.1",
+    "ts-jest": "^27.1.2",
+    "typescript": "^4.5.4"
+  },
+  "file": [
+    "lib/**/*"
+  ]
+}
